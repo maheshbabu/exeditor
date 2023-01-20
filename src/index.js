@@ -28,9 +28,11 @@ document.getElementById("app").innerHTML = `
 const dataJson = {};
 const dataJson1 = {};
 
-const tag1 = new Tags(".tagged1", dataJson);
+alert(Tags);
 
-const tag2 = new Tags(".tagged2", dataJson1);
+const tag1 = new Tags(".tagged1");
+
+const tag2 = new Tags(".tagged2");
 
 const tag3 = new Tags(".tagged3");
 

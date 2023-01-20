@@ -1,4 +1,5 @@
 // https://github.com/k-ivan/Tags
+
 (function () {
   // Helpers
   const $$ = (selectors, context) => {
@@ -31,7 +32,7 @@
       transition: "transitionend",
       WebkitTransition: "webkitTransitionEnd",
       MozTransition: "mozTransitionEnd",
-      OTransition: "oTransitionEnd otransitionend"
+      OTransition: "oTransitionEnd otransitionend",
     };
 
     for (const t in transitions) {
@@ -91,7 +92,7 @@
     const KEYS = {
       ENTER: 13,
       // COMMA: 188,
-      BACK: 8
+      BACK: 8,
     };
 
     let isPressed = false;
@@ -112,47 +113,47 @@
     const init = () => {
       // create and add wrapper
       wrap = create("div", {
-        className: `tags-container expression-editor-${tagInputInstanceName}`
+        className: `tags-container expression-editor-${tagInputInstanceName}`,
       });
 
       expr = create("div", {
-        className: "tags-expression"
+        className: "tags-expression",
       });
 
       preview = create("div", {
-        className: "tags-preview"
+        className: "tags-preview",
       });
 
       previewpara = create("p", {
-        textContent: ""
+        textContent: "",
       });
 
       entry = create("div", {
-        className: "tags-entry"
+        className: "tags-entry",
       });
 
       dropdown = create("div", {
-        className: "tags-dropdown"
+        className: "tags-dropdown",
       });
 
       dropdownHead = create("div", {
-        className: "tags-dropdown_head"
+        className: "tags-dropdown_head",
       });
 
       dropdownContent = create("div", {
-        className: "tags-dropdown_content"
+        className: "tags-dropdown_content",
       });
 
       button = create("button", {
         type: "button",
         // textContent: "Save",
-        className: "tag-save"
+        className: "tag-save",
       });
 
       field = create("input", {
         type: "text",
         className: "tag-input",
-        placeholder: el.placeholder || ""
+        placeholder: el.placeholder || "",
       });
 
       preview.appendChild(previewpara);
@@ -265,7 +266,7 @@
           '<span class="tag__name">' +
           name +
           "</span>" +
-          '<button class="tag__remove">&times;</button>'
+          '<button class="tag__remove">&times;</button>',
       });
       return tag;
     };
@@ -294,460 +295,460 @@
           Signature: "HasChanged(propertyName)",
           Category: "Project",
           ToolTip:
-            "Returns true if the specified property has changed; false otherwise"
+            "Returns true if the specified property has changed; false otherwise",
         },
         {
           Name: "IsCopy",
           Signature: null,
           Category: "Project",
-          ToolTip: "Project is being copied from other project (true/false)"
+          ToolTip: "Project is being copied from other project (true/false)",
         },
         {
           Name: "IsFinalize",
           Signature: null,
           Category: "Project",
-          ToolTip: "Project is being finalized (true/false)"
+          ToolTip: "Project is being finalized (true/false)",
         },
         {
           Name: "NewValue",
           Signature: "NewValue(propertyName)",
           Category: "Project",
-          ToolTip: "Returns the current value of the specified property"
+          ToolTip: "Returns the current value of the specified property",
         },
         {
           Name: "OldValue",
           Signature: "OldValue(propertyName)",
           Category: "Project",
-          ToolTip: "Returns the previous value of the specified property"
+          ToolTip: "Returns the previous value of the specified property",
         },
         {
           Name: "Choose",
           Signature: "Choose(index_num,value1,value2,...)",
           Category: "Global",
           ToolTip:
-            "Choose a value or action to perform from a list of values, based on an index number."
+            "Choose a value or action to perform from a list of values, based on an index number.",
         },
         {
           Name: "Concat",
           Signature: "Concat(string1,...)",
           Category: "Global",
-          ToolTip: "Concatenates a list or range of text strings."
+          ToolTip: "Concatenates a list or range of text strings.",
         },
         {
           Name: "Date",
           Signature: "Date(Year, Month, Day)",
           Category: "Global",
           ToolTip:
-            "Returns the date, that corresponds to the specified year, month and date."
+            "Returns the date, that corresponds to the specified year, month and date.",
         },
         {
           Name: "Day",
           Signature: "Day(Date)",
           Category: "Global",
-          ToolTip: "Returns the day of the month, a number from 1 to 31."
+          ToolTip: "Returns the day of the month, a number from 1 to 31.",
         },
         {
           Name: "Hour",
           Signature: "Hour(Date)",
           Category: "Global",
           ToolTip:
-            "Returns the hour as a number from 0 (12:00 A.M.) to 23 (11:00 P.M.)."
+            "Returns the hour as a number from 0 (12:00 A.M.) to 23 (11:00 P.M.).",
         },
         {
           Name: "If",
           Signature: "If(condition, truePart, falsePart)",
           Category: "Global",
           ToolTip:
-            "Evaluates a condition and returns either the second parameter or the third parameter, depending on the outcome of the condition (same as the Visual Basic `If` function)"
+            "Evaluates a condition and returns either the second parameter or the third parameter, depending on the outcome of the condition (same as the Visual Basic `If` function)",
         },
         {
           Name: "Lower",
           Signature: "Lower(string)",
           Category: "Global",
           ToolTip:
-            "Converts the value of a specified string to its lowercase equivalent."
+            "Converts the value of a specified string to its lowercase equivalent.",
         },
         {
           Name: "Minute",
           Signature: "Minute(Date)",
           Category: "Global",
-          ToolTip: "Returns the minute, a number from 0 to 59."
+          ToolTip: "Returns the minute, a number from 0 to 59.",
         },
         {
           Name: "Month",
           Signature: "Month(Date)",
           Category: "Global",
           ToolTip:
-            "Returns the month, a number from 1 (January) to 12 (December)."
+            "Returns the month, a number from 1 (January) to 12 (December).",
         },
         {
           Name: "Now",
           Signature: "Now()",
           Category: "Global",
-          ToolTip: "Returns the current date and time."
+          ToolTip: "Returns the current date and time.",
         },
         {
           Name: "Second",
           Signature: "Second(Date)",
           Category: "Global",
-          ToolTip: "Returns the second, a number from 0 to 59."
+          ToolTip: "Returns the second, a number from 0 to 59.",
         },
         {
           Name: "Today",
           Signature: "Today()",
           Category: "Global",
-          ToolTip: "Returns the current date."
+          ToolTip: "Returns the current date.",
         },
         {
           Name: "Upper",
           Signature: "Upper(string)",
           Category: "Global",
           ToolTip:
-            "Converts the value of a specified string to its uppdercase equivalent."
+            "Converts the value of a specified string to its uppdercase equivalent.",
         },
         {
           Name: "Year",
           Signature: "Year(Date)",
           Category: "Global",
-          ToolTip: "Returns the year of a date."
-        }
+          ToolTip: "Returns the year of a date.",
+        },
       ],
       Properties: [
         {
           Name: "Account",
           Category: "Project",
-          ToolTip: "Account"
+          ToolTip: "Account",
         },
         {
           Name: "AccountContact",
           Category: "Project",
-          ToolTip: "Contact"
+          ToolTip: "Contact",
         },
         {
           Name: "AccountName",
           Category: "Project",
-          ToolTip: "Account: Name"
+          ToolTip: "Account: Name",
         },
         {
           Name: "ActionCode",
           Category: "Project",
-          ToolTip: "Action code"
+          ToolTip: "Action code",
         },
         {
           Name: "ActionCopy",
           Category: "Project",
-          ToolTip: "Action (Copy)"
+          ToolTip: "Action (Copy)",
         },
         {
           Name: "AgreementAttachmentContents",
           Category: "Project",
-          ToolTip: "AgreementAttachmentContents"
+          ToolTip: "AgreementAttachmentContents",
         },
         {
           Name: "AgreementAttachmentFileName",
           Category: "Project",
-          ToolTip: "AgreementAttachmentFileName"
+          ToolTip: "AgreementAttachmentFileName",
         },
         {
           Name: "AgreementDate",
           Category: "Project",
-          ToolTip: "Agreement date"
+          ToolTip: "Agreement date",
         },
         {
           Name: "AgreementSubject",
           Category: "Project",
-          ToolTip: "AgreementSubject"
+          ToolTip: "AgreementSubject",
         },
         {
           Name: "AllowAdditionalInvoicing",
           Category: "Project",
-          ToolTip: "Allow additional invoices"
+          ToolTip: "Allow additional invoices",
         },
         {
           Name: "AllowCreateProjectInvoiceAsQuoted",
           Category: "Project",
-          ToolTip: "AllowCreateProjectInvoiceAsQuoted"
+          ToolTip: "AllowCreateProjectInvoiceAsQuoted",
         },
         {
           Name: "AllowMemberEntryOnly",
           Category: "Project",
-          ToolTip: "AllowMemberEntryOnly"
+          ToolTip: "AllowMemberEntryOnly",
         },
         {
           Name: "AutogenerateCode",
           Category: "Project",
-          ToolTip: "AutogenerateCode"
+          ToolTip: "AutogenerateCode",
         },
         {
           Name: "BlockEntry",
           Category: "Project",
-          ToolTip: "BlockEntry"
+          ToolTip: "BlockEntry",
         },
         {
           Name: "BlockPlanning",
           Category: "Project",
-          ToolTip: "BlockPlanning"
+          ToolTip: "BlockPlanning",
         },
         {
           Name: "BlockPurchasing",
           Category: "Project",
-          ToolTip: "BlockPurchasing"
+          ToolTip: "BlockPurchasing",
         },
         {
           Name: "BlockRebilling",
           Category: "Project",
-          ToolTip: "BlockRebilling"
+          ToolTip: "BlockRebilling",
         },
         {
           Name: "BudgetCostsAmountDC",
           Category: "Project",
-          ToolTip: "BudgetCostsAmountDC"
+          ToolTip: "BudgetCostsAmountDC",
         },
         {
           Name: "BudgetedHoursOverrunAction",
           Category: "Project",
-          ToolTip: "Budget overrun (Hours)"
+          ToolTip: "Budget overrun (Hours)",
         },
         {
           Name: "BudgetSalesAmountDC",
           Category: "Project",
-          ToolTip: "BudgetSalesAmountDC"
+          ToolTip: "BudgetSalesAmountDC",
         },
         {
           Name: "BudgetType",
           Category: "Project",
-          ToolTip: "BudgetType"
+          ToolTip: "BudgetType",
         },
         {
           Name: "BudgetTypeDescription",
           Category: "Project",
-          ToolTip: "Budget type: Description"
+          ToolTip: "Budget type: Description",
         },
         {
           Name: "Classification",
           Category: "Project",
-          ToolTip: "Classification"
+          ToolTip: "Classification",
         },
         {
           Name: "ClassificationDescription",
           Category: "Project",
-          ToolTip: "Classification: Description"
+          ToolTip: "Classification: Description",
         },
         {
           Name: "Code",
           Category: "Project",
-          ToolTip: "Code"
+          ToolTip: "Code",
         },
         {
           Name: "Created",
           Category: "Project",
-          ToolTip: "Created"
+          ToolTip: "Created",
         },
         {
           Name: "Creator",
           Category: "Project",
-          ToolTip: "Creator"
+          ToolTip: "Creator",
         },
         {
           Name: "CreatorFullName",
           Category: "Project",
-          ToolTip: "Creator: Full name"
+          ToolTip: "Creator: Full name",
         },
         {
           Name: "CustomerPOnumber",
           Category: "Project",
-          ToolTip: "CustomerPOnumber"
+          ToolTip: "CustomerPOnumber",
         },
         {
           Name: "Description",
           Category: "Project",
-          ToolTip: "Description"
+          ToolTip: "Description",
         },
         {
           Name: "DescriptionTermID",
           Category: "Project",
-          ToolTip: "DescriptionTermID"
+          ToolTip: "DescriptionTermID",
         },
         {
           Name: "Division",
           Category: "Project",
-          ToolTip: "Company"
+          ToolTip: "Company",
         },
         {
           Name: "DivisionName",
           Category: "Project",
-          ToolTip: "Company: Name"
+          ToolTip: "Company: Name",
         },
         {
           Name: "EndDate",
           Category: "Project",
-          ToolTip: "End date"
+          ToolTip: "End date",
         },
         {
           Name: "FinancialYear",
           Category: "Project",
-          ToolTip: "Financial year"
+          ToolTip: "Financial year",
         },
         {
           Name: "FixedPriceItem",
           Category: "Project",
-          ToolTip: "Item for fixed price invoicing"
+          ToolTip: "Item for fixed price invoicing",
         },
         {
           Name: "FixedPriceItemDescription",
           Category: "Project",
-          ToolTip: "Item description"
+          ToolTip: "Item description",
         },
         {
           Name: "ForceDirty",
           Category: "Project",
-          ToolTip: "ForceDirty"
+          ToolTip: "ForceDirty",
         },
         {
           Name: "ID",
           Category: "Project",
-          ToolTip: "ID"
+          ToolTip: "ID",
         },
         {
           Name: "IncludeSpecificationInInvoicePdf",
           Category: "Project",
-          ToolTip: "64642"
+          ToolTip: "64642",
         },
         {
           Name: "InternalNotes",
           Category: "Project",
-          ToolTip: "Internal notes"
+          ToolTip: "Internal notes",
         },
         {
           Name: "InvoiceAddress",
           Category: "Project",
-          ToolTip: "Invoice address"
+          ToolTip: "Invoice address",
         },
         {
           Name: "InvoiceAsQuoted",
           Category: "Project",
-          ToolTip: "Invoice as quoted"
+          ToolTip: "Invoice as quoted",
         },
         {
           Name: "Manager",
           Category: "Project",
-          ToolTip: "Manager"
+          ToolTip: "Manager",
         },
         {
           Name: "ManagerFullname",
           Category: "Project",
-          ToolTip: "ManagerFullname"
+          ToolTip: "ManagerFullname",
         },
         {
           Name: "Modified",
           Category: "Project",
-          ToolTip: "Modified"
+          ToolTip: "Modified",
         },
         {
           Name: "Modifier",
           Category: "Project",
-          ToolTip: "Modifier"
+          ToolTip: "Modifier",
         },
         {
           Name: "ModifierFullName",
           Category: "Project",
-          ToolTip: "Modifier: Full name"
+          ToolTip: "Modifier: Full name",
         },
         {
           Name: "Notes",
           Category: "Project",
-          ToolTip: "Notes"
+          ToolTip: "Notes",
         },
         {
           Name: "PaymentCondition",
           Category: "Project",
-          ToolTip: "Payment condition"
+          ToolTip: "Payment condition",
         },
         {
           Name: "PrepaidItem",
           Category: "Project",
-          ToolTip: "Item for prepaid invoicing"
+          ToolTip: "Item for prepaid invoicing",
         },
         {
           Name: "PrepaidType",
           Category: "Project",
-          ToolTip: "PrepaidType"
+          ToolTip: "PrepaidType",
         },
         {
           Name: "ProposalDocSubject",
           Category: "Project",
-          ToolTip: "ProposalDocSubject"
+          ToolTip: "ProposalDocSubject",
         },
         {
           Name: "ProposalDocument",
           Category: "Project",
-          ToolTip: "Proposal: Document"
+          ToolTip: "Proposal: Document",
         },
         {
           Name: "PurchaseMarkupPercentage",
           Category: "Project",
-          ToolTip: "Markup percentage"
+          ToolTip: "Markup percentage",
         },
         {
           Name: "SalesAmountDC",
           Category: "Project",
-          ToolTip: "Price agreement"
+          ToolTip: "Price agreement",
         },
         {
           Name: "SalesTimeQuantity",
           Category: "Project",
-          ToolTip: "Budgeted time (Hours)"
+          ToolTip: "Budgeted time (Hours)",
         },
         {
           Name: "SourceQuotation",
           Category: "Project",
-          ToolTip: "SourceQuotation"
+          ToolTip: "SourceQuotation",
         },
         {
           Name: "StartDate",
           Category: "Project",
-          ToolTip: "Start date"
+          ToolTip: "Start date",
         },
         {
           Name: "TimeQuantityToAlert",
           Category: "Project",
-          ToolTip: "Alert when exceeding (Hours)"
+          ToolTip: "Alert when exceeding (Hours)",
         },
         {
           Name: "TimeSpecificationType",
           Category: "Project",
-          ToolTip: "Include invoice specification"
+          ToolTip: "Include invoice specification",
         },
         {
           Name: "Type",
           Category: "Project",
-          ToolTip: "Type"
+          ToolTip: "Type",
         },
         {
           Name: "TypeDescription",
           Category: "Project",
-          ToolTip: "Type: Description"
+          ToolTip: "Type: Description",
         },
         {
           Name: "UseBillingMilestones",
           Category: "Project",
-          ToolTip: "UseBillingMilestones"
+          ToolTip: "UseBillingMilestones",
         },
         {
           Name: "YourRef",
           Category: "Project",
-          ToolTip: "Your ref."
+          ToolTip: "Your ref.",
         },
         {
           Name: "Result_ApproveSalesOrder",
           Category: "Return values",
-          ToolTip: "Result_ApproveSalesOrder"
+          ToolTip: "Result_ApproveSalesOrder",
         },
         {
           Name: "Result_SendEmail",
           Category: "Return values",
-          ToolTip: "Result_SendEmail"
-        }
+          ToolTip: "Result_SendEmail",
+        },
       ],
       KeyWords: ["TRUE", "FALSE", "NULL"],
       Operators: [
@@ -765,8 +766,8 @@
         ">=",
         "AND",
         "OR",
-        "NOT"
-      ]
+        "NOT",
+      ],
     };
 
     const setSuggestionDropdown = (tagData) => {
@@ -792,13 +793,13 @@
         // Add dynamic tab header
         const dropdownHeadTab = create("div", {
           className: `tags-dropdown_head--${categoryName} ${activeClass}`,
-          textContent: category
+          textContent: category,
         });
         dropdownHead.appendChild(dropdownHeadTab);
 
         // Add dynamic tab types like: functions, properties
         const dropdownContentTab = create("div", {
-          className: `tags-dropdown_content-item ${categoryName} ${activeClass}`
+          className: `tags-dropdown_content-item ${categoryName} ${activeClass}`,
         });
         dropdownContent.appendChild(dropdownContentTab);
 
@@ -830,13 +831,13 @@
           // Add All tab header
           const allDropdownHeadTab = create("div", {
             className: `tags-dropdown_head--all`,
-            textContent: "All"
+            textContent: "All",
           });
           dropdownHead.appendChild(allDropdownHeadTab);
 
           // Add all functions and properties to All tab
           const allDropdownContentTab = create("div", {
-            className: `tags-dropdown_content-item all`
+            className: `tags-dropdown_content-item all`,
           });
           dropdownContent.appendChild(allDropdownContentTab);
 

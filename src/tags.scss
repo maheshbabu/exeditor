@@ -247,6 +247,11 @@ $spacer: 15px;
 }
 
 input.tag-input {
+  appearance: none;
+  width: calc(100% - 2px);
+  height: 100%;
+  border: 0;
+  outline: 0;
   @if ($enable-flex) {
     flex: 3;
   }
@@ -254,11 +259,6 @@ input.tag-input {
     display: inline-block;
     vertical-align: middle;
   }
-  width: calc(100% - 2px);
-  height: 100%;
-  border: 0;
-  outline: 0;
-  appearance: none;
 }
 .tag {
   @if ($enable-flex == false) {

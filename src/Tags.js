@@ -1,3 +1,5 @@
+
+
 // https://github.com/k-ivan/Tags
 
 (function () {
@@ -75,7 +77,9 @@
     !hasClass(cls, el) ? addClass(cls, el) : removeClass(cls, el);
   };
 
-  const Tags = (tag) => {
+  // const Tags = (tag) => {
+
+  function Tags(tag) {
     const el = $(tag);
 
     if (el.instance) return;
@@ -981,7 +985,7 @@
 
     const updateExpression = () => {
       tagsExpression = tagsArray.join(" ");
-      const tagsPreview = document.querySelector(".tags-preview");
+      const tagsPreview = wrap.parentNode.querySelector(".tags-preview");
       addClass("active", tagsPreview);
       tagsPreview.innerHTML = tagsExpression;
       if (!tagsArray.length) {
@@ -1037,7 +1041,7 @@
 
       delete el.instance;
     };
-  };
+  }
 
   window.Tags = Tags;
 })();

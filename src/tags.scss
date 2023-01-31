@@ -1,7 +1,6 @@
 //=== body styles
 body {
   padding: 20px;
-  font-family: "Arial",sans-serif;
 }
 form {
   // margin-bottom: 30px;
@@ -18,9 +17,9 @@ form {
 //=== Tags
 $enable-flex: true;
 $tags-color: #fff;
-$primary-color: #317CAF;
+$primary-color: #317caf;
 $marked-color: lighten($primary-color, 20%);
-$exist-color: #EDB5A1;
+$exist-color: #edb5a1;
 $container-border: 1px solid #ccc;
 $container-bg: transparent;
 $container-line-height: 1.6;
@@ -35,15 +34,17 @@ $tags-radius: 3px;
 $btn-outline-color: #fff;
 $spacer: 15px;
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
 #expression {
   margin: 10px;
 
-  &:first-letter{
-    text-transform: capitalize
+  &:first-letter {
+    text-transform: capitalize;
   }
   span {
     display: inline-block;
@@ -56,6 +57,8 @@ $spacer: 15px;
 .expression-editor {
   position: relative;
   padding-top: 10px;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
 
   label {
     display: flex;
@@ -69,10 +72,10 @@ $spacer: 15px;
   width: calc(100% - 60px);
   padding: 8px 5px;
   color: #111111;
-  font-size: 14px;
+  font-size: 11px;
   background-color: #cccccc;
   border-radius: 0 4px 0 0;
-  transition: all ease-in .3s;
+  transition: all ease-in 0.3s;
 
   &.active {
     bottom: 0;
@@ -105,7 +108,7 @@ $spacer: 15px;
 .tags-expression {
   position: relative;
 
-  @if($enable-flex) {
+  @if ($enable-flex) {
     display: flex;
     flex-flow: row wrap;
   }
@@ -136,7 +139,6 @@ $spacer: 15px;
     }
   }
 
-
   .tags-entry {
     position: relative;
     min-width: 182px;
@@ -147,27 +149,27 @@ $spacer: 15px;
       // top: 30px;
       left: -6px;
       z-index: 10;
-      min-width: 310px;
+      min-width: 200px;
       width: auto;
       height: auto;
       min-height: 34px;
       border: $container-border;
       border-radius: $container-radius;
       background-color: #fff;
-      box-shadow: 0 3px 5px rgba(0, 0, 0, .15);
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
 
       &.open {
         display: flex;
         flex-direction: column;
       }
-      
+
       &_head {
         display: flex;
         flex-direction: row;
         justify-content: stretch;
         flex-grow: 1;
         border-bottom: 1px solid #ccc;
-        
+
         div {
           width: 100%;
           height: 32px;
@@ -176,11 +178,13 @@ $spacer: 15px;
           border-right: 1px solid #aaa;
           color: rgb(149, 149, 149);
           line-height: 32px;
+          font-size: 12px;
+          font-weight: bold;
           text-align: center;
           cursor: pointer;
           text-transform: capitalize;
           white-space: nowrap;
-          
+
           &:last-of-type {
             border-right: none;
           }
@@ -192,7 +196,7 @@ $spacer: 15px;
         }
       }
 
-      &_content {        
+      &_content {
         &-item {
           display: none;
           width: 100%;
@@ -214,7 +218,7 @@ $spacer: 15px;
         background: #ffffff;
         border-bottom: 1px solid #eee;
         line-height: 40px;
-        font-size: 1rem;
+        font-size: 12px;
         cursor: pointer;
 
         &.functions:before,
@@ -227,7 +231,7 @@ $spacer: 15px;
           height: 24px;
           border-radius: 4px;
           // opacity: .75;
-        }        
+        }
 
         &.functions:before {
           background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg width='100%25' height='100%25' viewBox='0 0 480 480' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' xmlns:serif='http://www.serif.com/' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;'%3E%3Cg transform='matrix(1,0,0,1,-109,-40)'%3E%3Cpath d='M350,46.668C221.29,46.668 116.67,151.288 116.67,279.998C116.67,408.708 221.29,513.328 350,513.328C478.61,513.328 583.33,408.708 583.33,279.998C583.33,151.288 478.61,46.668 350,46.668ZM344.027,169.028C322.375,169.028 304.734,186.669 304.734,208.415L304.734,265.349L325.453,265.349C330.68,265.349 334.785,269.548 334.785,274.681C334.785,279.814 330.68,284.013 325.453,284.013L304.734,284.013L304.734,400.303C304.734,405.436 300.535,409.635 295.402,409.635C290.27,409.635 286.07,405.436 286.07,400.303L286.07,284.013L265.351,284.013C260.219,284.013 256.019,279.814 256.019,274.681C256.019,269.548 260.219,265.349 265.351,265.349L286.07,265.349L286.07,208.415C286.07,176.403 312.109,150.36 344.031,150.36L360.832,150.36C366.059,150.36 370.164,154.559 370.164,159.692C370.164,164.919 366.059,169.024 360.832,169.024L344.027,169.028ZM442.308,395.078C445.203,399.277 444.082,405.066 439.789,407.957C438.203,409.078 436.336,409.637 434.562,409.637C431.574,409.637 428.59,408.145 426.816,405.531L400.777,366.984L374.738,405.531C372.965,408.145 370.07,409.637 367.086,409.637C365.219,409.637 363.445,409.078 361.859,407.957C357.558,405.063 356.441,399.277 359.332,395.078L389.57,350.371L359.332,305.57C356.437,301.277 357.559,295.492 361.851,292.597C366.051,289.703 371.929,290.824 374.73,295.116L400.773,333.664L426.812,295.116C429.707,290.823 435.492,289.702 439.785,292.597C444.078,295.491 445.2,301.277 442.305,305.57L412.063,350.371L442.308,395.078Z' style='fill-rule:nonzero;'/%3E%3Cg id='m'%3E%3C/g%3E%3Cg id='d'%3E%3C/g%3E%3Cg id='b'%3E%3C/g%3E%3Cg id='c'%3E%3C/g%3E%3Cg id='a'%3E%3C/g%3E%3Cg id='b1' serif:id='b'%3E%3C/g%3E%3Cg id='i'%3E%3C/g%3E%3Cg id='h'%3E%3C/g%3E%3Cg id='g'%3E%3C/g%3E%3Cg id='f'%3E%3C/g%3E%3Cg id='b2' serif:id='b'%3E%3C/g%3E%3Cg id='l'%3E%3C/g%3E%3Cg id='a1' serif:id='a'%3E%3C/g%3E%3Cg id='k'%3E%3C/g%3E%3Cg id='d1' serif:id='d'%3E%3C/g%3E%3Cg id='j'%3E%3C/g%3E%3Cg id='a2' serif:id='a'%3E%3C/g%3E%3Cg id='c1' serif:id='c'%3E%3C/g%3E%3Cg id='e'%3E%3C/g%3E%3Cg id='e1' serif:id='e'%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
@@ -239,7 +243,6 @@ $spacer: 15px;
       }
     }
   }
-  
 }
 
 .tags-expression {
@@ -254,8 +257,7 @@ input.tag-input {
   outline: 0;
   @if ($enable-flex) {
     flex: 3;
-  }
-  @else {
+  } @else {
     display: inline-block;
     vertical-align: middle;
   }
@@ -274,27 +276,26 @@ input.tag-input {
   color: $tags-color;
   background-color: $primary-color;
   border-radius: $tags-radius;
-  transition: background-color .3s ease;
+  transition: background-color 0.3s ease;
   cursor: default;
- 
+
   &:first-child {
-    margin-left: 0;  
+    margin-left: 0;
   }
-  
+
   &--marked {
-    background-color: $marked-color;  
+    background-color: $marked-color;
   }
-  
+
   &--exists {
     background-color: $exist-color;
     animation: shake 1s linear;
   }
-  
+
   &__name {
-    margin-right: 3px;  
+    margin-right: 3px;
   }
-  
- }
+}
 .tag__remove {
   position: absolute;
   top: 0;
@@ -304,32 +305,39 @@ input.tag-input {
   padding: 0 5px;
   font-size: 16px;
   font-weight: 400;
-  transition: opacity .3s ease;
-  opacity: .5;
+  transition: opacity 0.3s ease;
+  opacity: 0.5;
   cursor: pointer;
   border: 0;
   background-color: transparent;
   color: #fff;
   line-height: 1;
-  
+
   &:hover {
     opacity: 1;
   }
-  
+
   // &:focus {
   //   outline: 5px auto $btn-outline-color;
   // }
 }
 
-
- @keyframes shake {
-   0%, 100% {
-     transform: translate3d(0, 0, 0);
-   }
-   10%, 30%, 50%, 70%, 90% {
-     transform: translate3d(-5px, 0, 0);
-   }
-   20%, 40%, 60%, 80% {
-     transform: translate3d(5px, 0, 0);
-   }
- }
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate3d(-5px, 0, 0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate3d(5px, 0, 0);
+  }
+}
